@@ -1,6 +1,10 @@
 public class SqueareRoot {
 
-    double[] solve(double a, double b, double c, double epsilon) {
+    double[] solve(double a, double b, double c, double epsilon) throws Exception {
+
+        if(!(Math.abs(a) >= epsilon)){
+           throw  new Exception();
+        }
 
         double D = Math.pow(b, 2) - 4 * a * c;
 
@@ -17,7 +21,6 @@ public class SqueareRoot {
 //            result[1] = c / x1;
 
             // "школьная" формула работает
-
             result[0] = (-b + Math.sqrt(D)) / 2;
             result[1] = (-b - Math.sqrt(D)) / 2;
 
@@ -30,11 +33,5 @@ public class SqueareRoot {
 
         return result;
     }
-
-
-
-
-
-
 
 }

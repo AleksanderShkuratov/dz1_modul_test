@@ -6,7 +6,7 @@ import java.util.Random;
 class SqueareRootTest {
 
     @Test
-    void solveTest1() {
+    void solveTest1() throws Exception {
 
         // function x^2 + 1 = 0; корней нет
         // необходимо проверить что при x^2 + 1 = 0 функция возвращает пустой массив
@@ -31,7 +31,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest2(){
+    void solveTest2() throws Exception{
 
         // function x^2 - 1 = 0; есть два корня кратности 1 (x1=1, x2=-1)
         // необходимо проверить что при x^2 - 1 = 0
@@ -60,7 +60,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest3(){
+    void solveTest3() throws Exception{
 
         // function x^2+2x+1 = 0; есть ОДИН корень кратности 2(x1=x2=-1)
         // необходимо проверить что при x^2+2x+1 = 0
@@ -90,7 +90,7 @@ class SqueareRootTest {
 
 
     @Test
-    void solveTest4(){
+    void solveTest4() throws Exception{
 
         // коэффициент a не может быть равен 0. В этом случае solve выбрасывает исключение.
         // В этом случае solve выбрасывает исключение.
