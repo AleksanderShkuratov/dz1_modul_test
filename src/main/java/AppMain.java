@@ -3,9 +3,6 @@ import java.util.Scanner;
 public class AppMain {
     public static void main(String[] args) {
 
-        // function x^2 + 1 = 0;
-        //
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите коэффициент a:");
