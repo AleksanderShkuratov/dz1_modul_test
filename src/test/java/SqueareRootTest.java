@@ -80,7 +80,8 @@ class SqueareRootTest {
         int length = result.length;
 
         // assert
-        Assertions.assertEquals(1, length);
+        Assertions.assertEquals(2, length);
+        Assertions.assertEquals(-1, result[0]);
         Assertions.assertEquals(-1, result[0]);
 
     }

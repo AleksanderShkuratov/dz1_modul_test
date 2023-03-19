@@ -13,20 +13,22 @@ public class SqueareRoot {
             // не работает формула из доп. материалов стр.20
             // при b = 0.0 Math.signum(b) получается равным 0.0
             // дальнейшее умножение на Math.sqrt(D) и деление на 2 приводит к результату x1 = -0.0 и x2 = Infinity
-//            double x1 = -(b + Math.signum(b) * Math.sqrt(D)) / 2;
-//            double x2 = c / x1;
+//            result[0] = -(b + Math.signum(b) * Math.sqrt(D)) / 2;
+//            result[1] = c / x1;
 
             // "школьная" формула работает
-            double x1 = (-b + Math.sqrt(D)) / 2;
-            double x2 = (-b - Math.sqrt(D)) / 2;
 
-            result[0] = x1;
-            result[1] = x2;
+            result[0] = (-b + Math.sqrt(D)) / 2;
+            result[1] = (-b - Math.sqrt(D)) / 2;
 
             return result;
         }
 
-        return new double[1];
+        double[] result = new double[2];
+        result[0] = -b / (2 * a);
+        result[1] = -b / (2 * a);
+
+        return result;
     }
 
 
