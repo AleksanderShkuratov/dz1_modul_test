@@ -2,10 +2,9 @@ public class SqueareRoot {
 
     double[] solve(double a, double b, double c, double epsilon) throws Exception {
 
-
-        if(Double.isNaN(Math.abs(a)) || Math.abs(a) == Double.NEGATIVE_INFINITY || Math.abs(a) == Double.POSITIVE_INFINITY){
-            throw  new Exception();
-        }
+        check(a);
+        check(b);
+        check(c);
 
         if(!(Math.abs(a) >= epsilon)){
            throw  new Exception();
@@ -38,6 +37,11 @@ public class SqueareRoot {
         result[0] = (-b + Math.sqrt(D)) / 2;
         result[1] = (-b - Math.sqrt(D)) / 2;
         return result;
+    }
+
+    private void check(double i) throws Exception{if(Double.isNaN(Math.abs(i)) || Math.abs(i) == Double.NEGATIVE_INFINITY || Math.abs(i) == Double.POSITIVE_INFINITY){
+            throw  new Exception();
+        }
     }
 
 }
