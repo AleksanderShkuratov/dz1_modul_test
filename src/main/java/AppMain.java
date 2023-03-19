@@ -21,8 +21,11 @@ public class AppMain {
 
         SqueareRoot squeare = new SqueareRoot();
 
-        double[] result = squeare.squareRoot(a, b, c, epsilon);
+        double[] result = squeare.solve(a, b, c, epsilon);
 
+        if (result.length == 0){
+            System.out.println("Kорней нет");
+        }
         for (double i : result) {
             System.out.println(i);
         }

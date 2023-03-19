@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 class SqueareRootTest {
 
     @Test
-    void squareRoot() {
+    void solveTest1() {
 
         // function x^2 + 1 = 0; корней нет
         // необходимо проверить что при x^2 + 1 = 0 функция возвращает пустой массив
@@ -19,7 +19,7 @@ class SqueareRootTest {
 
         // act
         SqueareRoot squeare = new SqueareRoot();
-        double[] result = squeare.squareRoot(a, b, c, epsilon);
+        double[] result = squeare.solve(a, b, c, epsilon);
 
         int length = result.length;
 
@@ -27,4 +27,5 @@ class SqueareRootTest {
         Assertions.assertEquals(0, length);
 
     }
+
 }
