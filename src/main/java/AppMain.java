@@ -26,8 +26,9 @@ public class AppMain {
         if (result.length == 0){
             System.out.println("Kорней нет");
         }
+
         for (double i : result) {
-            System.out.println(i);
+            System.out.println("x = " + i);
         }
 
     }
