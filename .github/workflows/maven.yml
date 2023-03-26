@@ -8,7 +8,11 @@
 
 name: Java CI with Maven
 
-on: [push]
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
   build:
@@ -22,8 +26,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Test 
-      run: mvn test
     - name: Test 
       run: mvn test
     - name: Build with Maven
