@@ -3,10 +3,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-class SqueareRootTest {
+public class SqueareRootTest {
 
     @Test
-    void solveTest1() throws Exception {
+    void solve1Test() throws Exception {
 
         // function x^2 + 1 = 0; корней нет
         // необходимо проверить что при x^2 + 1 = 0 функция возвращает пустой массив
@@ -30,7 +30,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest2() throws Exception{
+    void solve2Test() throws Exception{
 
         // function x^2 - 1 = 0; есть два корня кратности 1 (x1=1, x2=-1)
         // необходимо проверить что при x^2 - 1 = 0
@@ -58,7 +58,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest3() throws Exception{
+    void solve3Test() throws Exception{
 
         // function x^2+2x+1 = 0; есть ОДИН корень кратности 2(x1=x2=-1)
         // необходимо проверить что при x^2+2x+1 = 0
@@ -87,7 +87,7 @@ class SqueareRootTest {
 
 
     @Test
-    void solveTest4() throws Exception{
+    void solve4Test() throws Exception{
 
         // коэффициент a не может быть равен 0. В этом случае solve выбрасывает исключение.
         // В этом случае solve выбрасывает исключение.
@@ -110,7 +110,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest5() throws Exception{
+    void solve5Test() throws Exception{
 
         // подобрать такие коэффициенты квадратного уравнения для случая одного корня кратности два,
         // чтобы дискриминант был отличный от нуля, но меньше заданного эпсилон.
@@ -137,7 +137,7 @@ class SqueareRootTest {
     }
 
     @Test
-    void solveTest6() throws Exception{
+    void solve6Test() throws Exception{
 
         // Посмотреть какие еще значения могут принимать числа типа double,
         // кроме числовых и написать тест с их использованием на все коэффициенты.
@@ -265,6 +265,4 @@ class SqueareRootTest {
         double rangeMax = Double.MAX_VALUE;
         return rangeMin + (rangeMax - rangeMin) * r.nextDouble();
     }
-
-
 }
