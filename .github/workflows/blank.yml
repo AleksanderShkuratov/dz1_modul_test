@@ -33,7 +33,7 @@ jobs:
           
      # Runs a set of commands using the runners shell
       - name: Maven Test
-        run: mvn -Dtest=SqueareRootTest
+        run: mvn -Dtest=SqueareRootTest test
 
       # Runs a set of commands using the runners shell
       - name: Maven Package
