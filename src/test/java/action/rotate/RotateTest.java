@@ -31,10 +31,12 @@ class RotateTest {
             "и поворачивающегося с угловой скоростью 4, " +
             "движение меняет угловое положение объекта на 2")
     void rotateTest() {
-        doReturn(new Direction(6))
+        int oldPosition = (int) (Math.random() * 9);
+        int angularVelocity = (int) (Math.random() * 9);
+        doReturn(new Direction(oldPosition))
                 .when(rotatable)
                 .getDirection();
-        doReturn(4)
+        doReturn(angularVelocity)
                 .when(rotatable)
                 .getAngularVelocity();
         doNothing()
@@ -43,7 +45,7 @@ class RotateTest {
 
         rotate.execute();
 
-        verify(rotatable).setDirection(eq(new Direction(2)));
+        verify(rotatable).setDirection(eq(new Direction((oldPosition + angularVelocity) % 8)));
     }
 
 

@@ -13,8 +13,8 @@ public class Direction {
     }
 
     public Direction next(int angularVelocity) {
-        int newPos = (this.getPosition() + angularVelocity) % this.getDirectionsCount();
-        return new Direction(newPos >= 0 ? newPos : this.directionsCount + newPos);
+        int newPosition = (this.getPosition() + angularVelocity) % this.getDirectionsCount();
+        return new Direction(newPosition >= 0 ? newPosition : this.directionsCount + newPosition);
     }
 
     public int getDirectionsCount() {
