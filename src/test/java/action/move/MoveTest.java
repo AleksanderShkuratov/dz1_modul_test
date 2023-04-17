@@ -45,8 +45,10 @@ class MoveTest {
     }
 
     @Test
-    @DisplayName("Попытка сдвинуть объект, у которого невозможно прочитать положение в пространстве, приводит к ошибке")
-    void test2() {
+    @DisplayName("Попытка сдвинуть объект, " +
+            "у которого невозможно прочитать положение в пространстве," +
+            " приводит к ошибке")
+    void positionCannotBeReadTest() {
         doThrow(new NullPointerException())
                 .when(movable)
                 .getPosition();
@@ -57,8 +59,10 @@ class MoveTest {
     }
 
     @Test
-    @DisplayName("Попытка сдвинуть объект, у которого невозможно прочитать значение мгновенной скорости, приводит к ошибке")
-    void test3() {
+    @DisplayName("Попытка сдвинуть объект," +
+            " у которого невозможно прочитать значение мгновенной скорости," +
+            " приводит к ошибке")
+    void speedValueCannotBeReadTest() {
         doReturn(new Vector(12, 5))
                 .when(movable)
                 .getPosition();
@@ -72,8 +76,10 @@ class MoveTest {
     }
 
     @Test
-    @DisplayName("Попытка сдвинуть объект, у которого невозможно изменить положение в пространстве, приводит к ошибке")
-    void test4() {
+    @DisplayName("Попытка сдвинуть объект," +
+            " у которого невозможно изменить положение в пространстве," +
+            " приводит к ошибке")
+    void impossibleToChangePositionTest() {
         doReturn(new Vector(12, 5))
                 .when(movable)
                 .getPosition();

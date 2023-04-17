@@ -1,5 +1,11 @@
 package action.rotate;
 
-public interface Rotatable {
+import entity.Direction;
 
+public interface Rotatable {
+    Direction getDirection();
+
+    int getAngularVelocity();
+
+    void setDirection(Direction newDirection);
 }
