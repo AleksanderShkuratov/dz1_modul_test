@@ -27,12 +27,13 @@ class RotateTest {
 
     @Test
     @DisplayName("Для объекта, " +
-            "находящегося в угловом положении 6 из 8 " +
-            "и поворачивающегося с угловой скоростью 4, " +
-            "движение меняет угловое положение объекта на 2")
+            "находящегося в одном из 8 угловых положений  " +
+            "и поворачивающегося с угловой скоростью от 0 до 100, " +
+            "движение меняет угловое положение объекта" +
+            "значение остатка от деления суммы начального положения и угловой скорости на 8")
     void rotateTest() {
         int oldPosition = (int) (Math.random() * 9);
-        int angularVelocity = (int) (Math.random() * 9);
+        int angularVelocity = (int) (Math.random()*100);
         doReturn(new Direction(oldPosition))
                 .when(rotatable)
                 .getDirection();
